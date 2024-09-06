@@ -1,0 +1,208 @@
+.popup-trigger {
+    display: block;
+    width: 170px;
+    right: 2rem;
+    margin: 3em auto;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    padding:1rem 2rem;
+    text-decoration:none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50em;
+    background: rgba(255,255,255, 0.1);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
+    transition:300ms all;
+  }
+  
+  .popup-trigger:hover {
+      opacity:.8;
+  }
+  .blur-background {
+    filter: blur(8px);  /* Apply blur effect */
+    transition: filter 0.3s ease;  /* Smooth transition */
+    }
+
+  .popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(94, 110, 141, 0.9); /* Background overlay for popup */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    color: black
+}
+
+.popup.is-visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1001;
+}
+
+.popup-container {
+  position: relative;
+  width: 80%;
+  max-height: 90%; /* Maintain the height limit */
+  margin: 2em auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: .25em .25em .4em .4em;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+  
+  .is-visible .popup-container {
+    transform:translateY(0);
+    transition:500ms all;
+  }
+  
+  .popup-container .popup-close {
+    position: absolute;
+    top: 8px;
+    font-size:0;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  .popup-container .popup-close::before,
+  .popup-container .popup-close::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    width: 14px;
+    height: 3px;
+    background-color: #8f9cb5;
+  }
+  
+  .popup-container .popup-close::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: 8px;
+  }
+  
+  .popup-container .popup-close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 8px;
+  }
+  
+  
+  .popup-container .popup-close:hover:before,
+  .popup-container .popup-close:hover:after {
+    background-color:#35a785;
+    transition:300ms all;
+  }
+
+  .cardDetailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;                
+    justify-content: space-between;
+    max-width: 100%;          
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow cards to scroll vertically */
+}
+
+  .cardDetails {
+    flex: 1 1 calc(30% - 20px); /* Make each card take roughly 30% of the width */
+    max-width: 30%;             /* Ensure the cards are limited to 30% */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .cardDetails:hover {
+    transform: translateY(-5px);  /* Slight lift effect on hover */
+  }
+  
+
+  @keyframes fade{
+    from{opacity:0.5;}
+    to{opacity:1;}
+  }
+  
+  .controls{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:1.5em;
+    padding:15px 10px;
+    border-radius:5px;
+    
+  }
+  
+  .controls:hover{
+    background:white;
+    transition:0.3s;
+  }
+  
+  .controls:active{
+    color:grey;
+  }
+  
+  #left-arrow{
+    left:10px;
+  }
+  
+  #right-arrow{
+    right:10px;
+  }
+  
+  #dots-con{
+    
+    text-align:center;
+  }
+  .dot{
+    display:inline-block;
+    background:grey;
+    padding:8px;
+    border-radius:50%;
+    margin:10px 5px;
+  }
+  
+  .active{
+    background:crimson;
+  }
+  
+/* On smaller screens */
+@media (max-width: 992px) {
+  .popup-container {
+      max-height: 80%; /* Slightly reduce height for better visibility on medium screens */
+      overflow-y: scroll; /* Add vertical scrolling for medium screens */
+  }
+
+  .cardDetails {
+      flex: 1 1 calc(48% - 20px); 
+      max-width: 48%;
+  }
+}
+
+@media (max-width: 576px) {
+  .popup-container {
+      max-height: 70%; /* Adjust height for smaller devices */
+      overflow-y: scroll; /* Ensure vertical scrolling on small screens */
+  }
+
+  .cardDetails {
+      flex: 1 1 100%; 
+      max-width: 100%;
+  }
+}
