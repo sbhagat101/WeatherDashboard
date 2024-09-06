@@ -5,5 +5,5 @@ This weather dashboard webpage was created using the OpenWeather Api in ReactJs,
 
  ## Installation
  ```
-https://github.com/sbhagat101/WeatherDashboard.git
+ git clone https://github.com/sbhagat101/WeatherDashboard.git
 ```
