@@ -19,7 +19,7 @@ A responsive weather dashboard built with React that provides real-time **curren
 
 ---
 
-## 🧰 Tech Stacka
+## 🧰 Tech Stack
 
 | Layer       | Technology |
 |-------------|------------|
