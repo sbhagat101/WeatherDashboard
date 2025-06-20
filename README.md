@@ -4,7 +4,7 @@ A responsive weather dashboard built with React that provides real-time **curren
 
 ## 🚀 Live Demo
 
-[Click here to try the live version](https://sbhagat101.github.io/WeatherDashboard/) <!-- Replace with your deployed link -->
+[Click here to try the live version](https://sbhagat101.github.io/WeatherDashboard/) 
 
 ---
 
@@ -19,7 +19,7 @@ A responsive weather dashboard built with React that provides real-time **curren
 
 ---
 
-## 🧰 Tech Stack
+## 🧰 Tech Stacka
 
 | Layer       | Technology |
 |-------------|------------|
@@ -28,16 +28,4 @@ A responsive weather dashboard built with React that provides real-time **curren
 | Styling     | CSS Modules |
 | API         | OpenWeatherMap (weather & forecast) |
 
-\* Consider replacing jQuery with React state-based modal management in future iterations.
-
----
-
-## 📂 File Structure
-src/
-├── App.js // Main logic and state
-├── forecast.js // Forecast popup + data filtering
-├── details.js // Reusable weather detail cards
-├── App.css // App styling
-├── forecast.css // Popup styling
-├── details.css // Card styling
 
