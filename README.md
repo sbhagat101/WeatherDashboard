@@ -4,7 +4,7 @@ A responsive weather dashboard built with React that provides real-time **curren
 
 ## 🚀 Live Demo
 
-[Click here to try the live version](#) <!-- Replace with your deployed link -->
+[Click here to try the live version](https://sbhagat101.github.io/WeatherDashboard/) <!-- Replace with your deployed link -->
 
 ---
 
